@@ -58,3 +58,74 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/quadcode-shivam/ems_user.git
    cd ems_user
+Backend Setup
+
+Navigate to the backend folder and install dependencies:
+bash
+Copy code
+composer install
+Copy .env.example to .env and set up your database credentials and other environment variables.
+Frontend Setup
+
+Navigate to the frontend folder and install dependencies:
+bash
+Copy code
+npm install
+Database Migration
+
+Run migrations to set up the database tables:
+bash
+Copy code
+php artisan migrate
+Start the Development Servers
+
+Backend (PHP)
+bash
+Copy code
+php artisan serve
+Frontend (React)
+bash
+Copy code
+npm start
+Usage
+After installation, open your browser and go to http://localhost:3000 to access the Employee Management System.
+
+Folder Structure
+bash
+Copy code
+ems_user/
+├── backend/                # Laravel API for backend management
+├── frontend/               # React frontend with user interface
+├── migrations/             # Database migrations for MySQL setup
+├── public/                 # Public assets (images, JS, CSS)
+├── .env                    # Environment variables
+└── README.md               # Project documentation
+Screenshots
+User Dashboard
+
+An overview of attendance, leave balance, and task summary.
+
+Attendance Page
+
+A page where employees can check in/out and view attendance history.
+
+Leave Management
+
+A comprehensive leave management interface for applying and tracking leave applications.
+
+Contributing
+We welcome contributions to make the Employee Management System even better. Here’s how you can contribute:
+
+Fork the repository.
+Create a new branch (feature/your-feature-name).
+Commit your changes.
+Open a pull request with a detailed description of your changes.
+For significant changes, please open an issue first to discuss what you’d like to contribute.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+vbnet
+Copy code
+
+This README covers all the important sections with a clean layout. For each placeholder, s
