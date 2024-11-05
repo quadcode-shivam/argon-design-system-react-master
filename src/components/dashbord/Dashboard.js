@@ -119,22 +119,6 @@ const Dashboard = () => {
                   </Card>
                 </Col>
               </Row>
-
-              <Row className="mt-4">
-                {/* Attendance Report */}
-                <Col lg="6" md="6" className="mb-4">
-                  <Card className="shadow border-0">
-                    <CardBody>
-                      <CardTitle tag="h5">Attendance Report</CardTitle>
-                      <p>Track attendance applications and records.</p>
-                      <Button color="success" onClick={() => navigate("/attendance-report")}>
-                        View Attendance Report
-                      </Button>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-
             </Container>
           </section>
         </div>
