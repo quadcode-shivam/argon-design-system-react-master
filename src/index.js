@@ -17,6 +17,8 @@ import Leave from "components/Leaves/Leaves";
 import ViewAllLeaves from "components/Report/ViewAllLeaves";
 import SalaryReport from "components/Salary/Salary";
 import MarkAttendance from "components/Attendance/MarkAttendance";
+import Calendor from "components/Calendor/Calendor";
+import UserTask from "components/Task/UserTask";
 
 
 
@@ -41,6 +43,8 @@ root.render(
       <Route path="/view-suspended-leave" exact element={<ViewAllLeaves />} />
       <Route path="/download-report" exact element={<ViewAllLeaves />} />
       <Route path="/apply-leave" exact element={<ViewAllLeaves />} />
+      <Route path="/calendar" exact element={<Calendor />} />  
+      <Route path="/tasks-report" exact element={<UserTask />} />  
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
