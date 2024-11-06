@@ -19,6 +19,7 @@ import SimpleFooter from "components/Footers/SimpleFooter";
 import { fetchAttendance, loadAttendanceRecords } from "api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ThemeColor from "theme";
 
 const Attendance = () => {
   const [modal, setModal] = useState(false);
@@ -126,18 +127,7 @@ const Attendance = () => {
       <main>
         <div className="position-relative">
           <section className="section section-hero section-shaped">
-            <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
-            </div>
+          <ThemeColor/>
             <Container className="mt-5">
               <Row className="align-items-center">
                 <Col xs="6">

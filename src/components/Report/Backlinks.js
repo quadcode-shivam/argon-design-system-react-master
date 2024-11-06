@@ -1,3 +1,4 @@
+import ThemeColor from "theme";
 import React, { useRef, useEffect, useState } from "react";
 import DemoNavbar from "components/Navbars/DemoNavbar";
 import {
@@ -191,18 +192,7 @@ const Backlink = () => {
           {/* Hero for FREE version */}
           <section className="section section-hero section-shaped">
             {/* Background circles */}
-            <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
-            </div>
+            <ThemeColor/>
             <Container className="mt-5">
               <Row className="align-items-center">
                 <Col xs="6">

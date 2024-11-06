@@ -9,6 +9,7 @@ import {
   isSameMonth,
   isSameDay,
 } from "date-fns";
+import ThemeColor from "theme";
 import {
   Container,
   Row,
@@ -186,18 +187,7 @@ const CalendarWithEvents = () => {
       <main ref={mainRef}>
         <div className="position-relative">
           <section className="section section-hero section-shaped">
-            <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
-            </div>
+            <ThemeColor/>
             <Container className="mt-5 text-white">
               {loading && <Spinner color="primary" />}
               {error && <Alert color="danger">{error}</Alert>}

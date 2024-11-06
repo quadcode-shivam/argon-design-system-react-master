@@ -1,3 +1,4 @@
+import ThemeColor from "theme";
 import React, { useRef, useEffect, useState } from "react";
 import {
   Container,
@@ -170,18 +171,7 @@ const ViewAllLeaves = () => {
       <div className="position-relative">
           {/* Hero for FREE version */}
           <section className="section section-hero section-shaped">
-          <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
-            </div>
+          <ThemeColor/>
         <Container className="mt-5">
           <h1>{getTitle()}</h1>
           <Row className="mb-3">

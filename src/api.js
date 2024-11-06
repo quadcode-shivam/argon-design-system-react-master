@@ -528,18 +528,66 @@ const updateCheckedStatus = async (data) => {
     throw error;
   }
 };
-const fetchSalaryData = async (data) => {
+const createSalaryDistribution = async (data) => {
   try {
-    const response = await api.post("backlinks/update-checked",data);
+    const response = await api.post('salary-distributions', data);
     return response.data;
   } catch (error) {
-    console.error("Error updating checked status:", error);
+    console.error("Error creating salary distribution:", error);
+    throw error;
+  }
+};
+
+// Function to update an existing salary distribution
+const updateSalaryDistribution = async (id, data) => {
+  try {
+    const response = await api.post(`salary-distributions/update/${id}`, data);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating salary distribution:", error);
+    throw error;
+  }
+};
+
+// Function to delete a salary distribution
+const deleteSalaryDistribution = async (id) => {
+  try {
+    const response = await api.post(`salary-distributions/delete/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error deleting salary distribution:", error);
+    throw error;
+  }
+};
+
+// Function to fetch all salary distributions
+const fetchAllSalaryDistributions = async () => {
+  try {
+    const response = await api.post('salary-distributions/fetch-all');
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching all salary distributions:", error);
+    throw error;
+  }
+};
+
+// Function to fetch salary distributions by user ID
+const fetchSalaryByUserId = async (userId) => {
+  try {
+    const response = await api.post('/salary-distributions/fetch-by-user-id', { user_id: userId });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching salary distribution by user ID:", error);
     throw error;
   }
 };
 
 export {
-    fetchSalaryData,
+  createSalaryDistribution,
+  updateSalaryDistribution,
+  deleteSalaryDistribution,
+  fetchAllSalaryDistributions,
+  fetchSalaryByUserId,
   loginUser,
   registerUser,
   checkIn,

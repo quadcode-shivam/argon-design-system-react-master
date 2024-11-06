@@ -1,5 +1,6 @@
 import React from "react";
 // reactstrap components
+import ThemeColor from "theme";
 import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
 
 class SimpleFooter extends React.Component {

@@ -151,7 +151,7 @@ const Login = () => {
               <a
                 className="text-light"
                 href="#pablo"
-                onClick={() => navigate('/register')}
+                onClick={() => navigate('/register-page')}
               >
                 <small>Create new account</small>
               </a>

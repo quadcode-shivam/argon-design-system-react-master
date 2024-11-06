@@ -9,6 +9,7 @@ import "jspdf-autotable";
 import { checkIn, checkOut, fetchCheckInRecords } from "../../api";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ThemeColor from "theme";
 
 const MarkAttendance = () => {
   const mainRef = useRef(null);
@@ -114,18 +115,7 @@ const MarkAttendance = () => {
       <main ref={mainRef}>
         <section className="section section-hero section-shaped">
             {/* Background circles */}
-            <div className="shape shape-style-1 shape-default">
-              <span className="span-150" />
-              <span className="span-50" />
-              <span className="span-50" />
-              <span className="span-75" />
-              <span className="span-100" />
-              <span className="span-75" />
-              <span className="span-50" />
-              <span className="span-100" />
-              <span className="span-50" />
-              <span className="span-100" />
-            </div>
+            <ThemeColor/>
           <Container className="mt-5">
             <Row className="justify-content-center">
               <Col lg="6" md="6" className="mb-4">
