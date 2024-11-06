@@ -1,131 +1,180 @@
-# Employee Management System (EMS)
+# Quad Pulse EMS - User Portal
 
-### An advanced user-based management system designed for efficient employee attendance tracking, salary report management, leave requests, and task monitoring.
+**Quad Pulse EMS** is a user-friendly, employee management system designed to handle essential HR functions within IT companies. This project consists of three major modules:
 
-![Project Logo](link-to-your-logo-image) <!-- Add your logo here -->
+- **User Portal (Frontend)**: Developed using **React**, **Reactstrap**, and **Material-UI (MUI)**.
+- **Backend**: The server-side logic powered by **Laravel**.
+- **Admin Portal**: The admin interface for managing employees, tasks, attendance, and more.
+
+This README focuses on setting up and using the **User Portal** frontend.
+
+---
 
 ## Table of Contents
-1. [Overview](#overview)
+
+1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Folder Structure](#folder-structure)
-6. [Screenshots](#screenshots)
-7. [Contributing](#contributing)
-8. [License](#license)
+3. [Tech Stack](#tech-stack)
+4. [Installation](#installation)
+5. [API Documentation](#api-documentation)
+6. [Frontend Project Structure](#frontend-project-structure)
+7. [Usage](#usage)
+8. [Contributing](#contributing)
+9. [License](#license)
 
-## Overview
+---
 
-The **Employee Management System (EMS)** is a powerful tool that streamlines and automates various administrative tasks in employee management. It enables organizations to manage attendance, track leave applications, generate salary reports, and handle tasks efficiently. This platform is ideal for organizations that require an effective, centralized management system for their employees.
+## Project Overview
 
-### Key Technologies
-- **Frontend**: React, HTML, CSS, JavaScript
-- **Backend**: PHP, MySQL, Laravel (for API management)
-- **Icons**: `react-icons` for a modern, streamlined UI
+Quad Pulse EMS is designed to simplify employee management for IT companies. The **User Portal** enables employees to interact with essential features like:
+
+- **Attendance Management**: Employees can clock in/out and track their attendance.
+- **Leave Management**: Employees can request leaves and check their approval status.
+- **Task Management**: Employees can view their assigned tasks and update task statuses.
+- **Salary Management**: Employees can view their salary details and download salary slips.
+
+The **User Portal** is developed using **React**, **Reactstrap**, and **Material-UI (MUI)** to provide a seamless and responsive user experience.
+
+---
 
 ## Features
 
-### 1. Attendance Management
-   - **Mark Attendance**: Employees can check in and out, with logs maintained for each entry including time and status.
-   - **Attendance History**: Detailed records of daily attendance, late entries, and absences for each employee.
+- **Login/Logout**: Employees can securely log in to the portal.
+- **Dashboard**: Overview of attendance, tasks, and leave balances.
+- **Attendance**: Track daily attendance, view clock-in/clock-out times.
+- **Leave Requests**: Apply for leave, view leave history, and check approval status.
+- **Tasks**: View assigned tasks, mark tasks as completed, and track deadlines.
+- **Salary Details**: View salary details, download salary slips.
+- **Notifications**: Receive notifications for task assignments, leave approvals, etc.
 
-### 2. Leave Management
-   - **Leave Applications**: Employees can apply for leave, and managers can review, approve, or reject applications.
-   - **Leave Status**: Employees can track the status of their leave requests (e.g., pending, approved, or rejected) in real-time.
+---
 
-### 3. Salary Management
-   - **Salary Reports**: Employees can access salary history, including details on deductions and earnings.
-   - **Automated Calculations**: Monthly salary and deduction calculations are automated based on attendance records.
+## Tech Stack
 
-### 4. Task Management
-   - **Task Dashboard**: Employees can view and manage their assigned tasks, track progress, and update task status.
-   - **Advanced Task View**: Provides a comprehensive task history, including assignment updates, completion dates, and comments.
+- **Frontend**: React, Reactstrap, Material-UI (MUI), Axios, React Router
+- **Backend**: Laravel (PHP)
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Tokens) for secure API communication
 
-### 5. User Dashboard
-   - **Centralized Dashboard**: Displays key employee information, attendance summary, leave balance, and task summaries for an efficient overview.
+---
 
 ## Installation
 
+To set up the **User Portal** locally, follow these steps:
+
 ### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [PHP](https://www.php.net/)
-- [MySQL](https://www.mysql.com/)
-- [Composer](https://getcomposer.org/)
 
-### Steps
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/quadcode-shivam/ems_user.git
-   cd ems_user
-Backend Setup
+- Node.js and npm
+- PHP (for backend setup, if you want to set up the complete system)
+- MySQL or MariaDB (for backend database)
 
-Navigate to the backend folder and install dependencies:
-bash
-Copy code
-composer install
-Copy .env.example to .env and set up your database credentials and other environment variables.
-Frontend Setup
+### Steps to Run the Project
 
-Navigate to the frontend folder and install dependencies:
-bash
-Copy code
-npm install
-Database Migration
+1. **Clone the Repository:**
 
-Run migrations to set up the database tables:
-bash
-Copy code
-php artisan migrate
-Start the Development Servers
+    ```bash
+    git clone https://github.com/quadcode-shivam/quad-pulse-ems-frontend.git
+    ```
 
-Backend (PHP)
-bash
-Copy code
-php artisan serve
-Frontend (React)
-bash
-Copy code
-npm start
-Usage
-After installation, open your browser and go to http://localhost:3000 to access the Employee Management System.
+2. **Navigate to the frontend directory:**
 
-Folder Structure
-bash
-Copy code
-ems_user/
-├── backend/                # Laravel API for backend management
-├── frontend/               # React frontend with user interface
-├── migrations/             # Database migrations for MySQL setup
-├── public/                 # Public assets (images, JS, CSS)
-├── .env                    # Environment variables
-└── README.md               # Project documentation
-Screenshots
-User Dashboard
+    ```bash
+    cd quad-pulse-ems-frontend
+    ```
 
-An overview of attendance, leave balance, and task summary.
+3. **Install the required npm packages:**
 
-Attendance Page
+    ```bash
+    npm install
+    ```
 
-A page where employees can check in/out and view attendance history.
+4. **Start the React development server:**
 
-Leave Management
+    ```bash
+    npm start
+    ```
 
-A comprehensive leave management interface for applying and tracking leave applications.
+    This will start the frontend on `http://localhost:3000`.
 
-Contributing
-We welcome contributions to make the Employee Management System even better. Here’s how you can contribute:
+---
 
-Fork the repository.
-Create a new branch (feature/your-feature-name).
-Commit your changes.
-Open a pull request with a detailed description of your changes.
-For significant changes, please open an issue first to discuss what you’d like to contribute.
+## API Documentation
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+The **User Portal** communicates with the backend via RESTful APIs. Below are the main API endpoints the frontend interacts with.
 
-vbnet
-Copy code
+### Authentication
 
-This README covers all the important sections with a clean layout. For each placeholder, s
+- **POST** `/api/login`: Logs in a user and returns a JWT token.
+- **POST** `/api/register`: Registers a new employee (for demo purposes, this endpoint may not be used in the portal).
+
+### Attendance Management
+
+- **GET** `/api/attendance`: Fetches the attendance records for the logged-in employee.
+- **POST** `/api/attendance`: Marks the employee’s attendance (clock-in).
+- **PUT** `/api/attendance/{id}`: Updates the attendance status (clock-out).
+
+### Leave Management
+
+- **GET** `/api/leaves`: Fetches the employee’s leave records.
+- **POST** `/api/leaves`: Submits a new leave request.
+- **PUT** `/api/leaves/{id}`: Updates leave request status (approved/rejected).
+
+### Task Management
+
+- **GET** `/api/tasks`: Retrieves all tasks assigned to the logged-in employee.
+- **POST** `/api/tasks`: Marks a task as completed or updates its status.
+
+### Salary Management
+
+- **GET** `/api/salaries`: Retrieves the employee's salary details and past salary slips.
+
+---
+
+## Frontend Project Structure
+
+The **frontend** project is organized as follows:
+
+
+### Key Folders
+
+- **/components**: Contains reusable components like buttons, forms, modals, etc.
+- **/pages**: Contains the different page views like the Dashboard, Attendance, Leave Requests, etc.
+- **/services**: Contains functions to call backend APIs using Axios.
+
+---
+
+## Usage
+
+Once the **frontend** is set up, employees can:
+
+1. **Log in**: Use valid credentials to access the portal.
+2. **Dashboard**: View the summary of attendance, leave balances, and task statuses.
+3. **Attendance**: Track and mark attendance, view attendance history.
+4. **Leave Management**: Apply for leave and check its approval status.
+5. **Task Management**: View, update, and track assigned tasks.
+6. **Salary Management**: Check and download salary details.
+
+The application automatically syncs with the **backend** via the provided APIs.
+
+---
+
+## Contributing
+
+We welcome contributions to improve **Quad Pulse EMS**. To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Implement your feature/fix.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Create a pull request.
+
+---
+
+## License
+
+This project does not have a formal license. Feel free to use and modify it as per your needs, but please credit the original work and contributors.
+
+---
+
+**Quad Pulse EMS** helps IT companies streamline employee management by offering features like attendance tracking, leave requests, task management, and salary details all in one place.
